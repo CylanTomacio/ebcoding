@@ -1,0 +1,139 @@
+/*Diseño de seccion Proyecto*/
+
+.proyectos {
+    background-color: #f2f2f2;
+}
+
+.proyectosAgrupados {
+    display: grid;
+    width: 90%;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(4,1fr);
+    grid-template-areas: "articulo1" 
+                         "articulo2"
+                         "articulo3" 
+                         "articulo4";
+    justify-items: center;
+    align-items: center;
+    padding: 10px;
+    border-top: 1px solid #cecece;
+}
+
+.proyecto {
+    font-size: 8px;
+    display: flex;
+    min-height: 100px;
+    word-wrap: break-word;
+    flex-direction: row;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    margin-bottom: 5px;
+    background-color: #fff;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+
+.proyecto:hover {
+    top: -2px;
+    transform: scale(1, 1.05);
+    z-index: 10;
+    box-shadow: 0 4px 5px rgba(0,0,0,0.2);
+}
+
+.imagen {
+    padding-left: 40%;
+    border-radius: 8px 0 0 8px;
+    background-size: cover;
+    background-position: center center;
+}
+
+.proyecto article {
+    padding: 15px;
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.proyecto h4 {
+    font-size: 12px;
+    margin: 0;
+    color: #333;
+}
+
+.proyecto p{
+    flex: 1;
+    line-height: 1.2;
+}
+
+@media screen and  (min-width: 768px) {
+    .proyectos {
+        flex-direction: column;
+        align-items: center;
+        background-color: #f2f2f2;
+    }
+
+    .proyectosAgrupados {
+        display: grid;
+        width: 90%;
+        height: 100%;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,1fr);
+        grid-template-areas: "articulo1 articulo2"
+                            "articulo3 articulo4";
+        justify-items: center;
+        align-items: center;
+        grid-gap: 18px;
+        padding: 20px;
+        border-top: 1px solid #cecece;
+    }
+
+    .proyecto {
+        display: flex;
+        min-height: 200px;
+        max-height: 300px;
+        word-wrap: break-word;
+        flex-direction: row;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border-radius: 8px;
+        background-color: #fff;
+        transition: all .3s ease-in-out;
+        cursor: pointer;
+        overflow: hidden;
+    }
+
+    .proyecto:hover {
+        top: -2px;
+        transform: scale(1, 1.05);
+        z-index: 10;
+        box-shadow: 0 4px 5px rgba(0,0,0,0.2);
+    }
+
+    .imagen {
+        padding-left: 40%;
+        border-radius: 8px 0 0 8px;
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .proyecto article {
+        padding: 15px;
+        display: flex;
+        flex: 1;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .proyecto h4 {
+        font-size: 16px;
+        margin: 0;
+        color: #333;
+    }
+
+    .proyecto p{
+        flex: 1;
+        font-size: 14px;
+        line-height: 1.2;
+    }
+
+}
