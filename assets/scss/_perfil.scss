@@ -7,7 +7,7 @@
 .descripcion {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 40% 30% 30%;
+    grid-template-rows: 1fr;
     grid-template-areas: "foto"
                          "sobreMi"
                          "detalles";
@@ -32,6 +32,10 @@
 .detalles {
     grid-area: detalles;
     
+}
+
+.detalles__lista {
+    list-style: none;
 }
 
 @media screen and (min-width: 768px) {
